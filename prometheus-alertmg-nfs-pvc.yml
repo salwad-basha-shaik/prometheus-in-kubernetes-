@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: prometheus-alertmg-nfs-pvc
+spec:
+  volumeName: prometheus-alertmg-nfs-pv
+  accessModes:
+  - ReadWriteMany
+  resources:
+     requests:
+       storage: 2Gi
+

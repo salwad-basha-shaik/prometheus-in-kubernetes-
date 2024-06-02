@@ -1,0 +1,13 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: pv-hp
+spec:
+  hostPath:
+    path: /prometheusLogs
+  capacity:
+    storage: 8Gi
+  accessModes:
+    - ReadWriteOnce # only one node can read or write the data to the volume - ReadWriteMany/ReadOnlyMany
+  persistentVolumeReclaimPolicy: Retain  # Delete / Recycle
+
